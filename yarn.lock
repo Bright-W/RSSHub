@@ -8507,10 +8507,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rss-parser@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-3.6.0.tgz#6ded6f1d25e092fcec813fab383200557ae84fdd"
-  integrity sha512-uBseQIDqDFOw0xdphnhwxPUHGplUebfVUCU43aeVqGX28dun5SaTQX2F2smLAkbqAxIEd26YgJVVfdFr4x1OFA==
+rss-parser@3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-3.6.1.tgz#2d6f5ab934146adb2caa6e79eab64c29a2c8f8e1"
+  integrity sha512-S3YJaSAw1EeDPota1/AF3qdhZedZ9FmN/M3rcbI+eExexVL2MDKhWFnDqA+Wd7PG0+7R1jkWzaDhsl67Y5jTLA==
   dependencies:
     entities "^1.1.1"
     xml2js "^0.4.19"

@@ -335,12 +335,6 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="fengkx" example="/maitta" path="/maitta" supportPodcast="1" />
 
-## 博客: 敬维
-
-### 博客: 敬维
-
-<Route author="a180285" example="/blogs/jingwei.link" path="/blogs/jingwei.link"/>
-
 ## 财新博客
 
 ### 用户博客
@@ -372,6 +366,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 标签
 
 <Route author="LogicJake" example="/cyzone/label/创业邦周报" path="/cyzone/label/:name" :paramsDesc="['标签名称']"/>
+
+## 大侠阿木
+
+### 首页
+
+<Route author="kt286" example="/daxiaamu/home" path="/daxiaamu/home"/>
 
 ## 大众点评
 
@@ -448,6 +448,16 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="junfengP" example="/metred/fuli" path="/metred/fuli" />
 
+## 个人博客
+
+### 敬维
+
+<Route author="a180285" example="/blogs/jingwei.link" path="/blogs/jingwei.link"/>
+
+### 王垠-当然我在扯淡
+
+<Route author="junbaor" example="/blogs/wangyin" path="/blogs/wangyin"/>
+
 ## 古诗文网
 
 ### 首页推荐
@@ -522,11 +532,11 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 分类
 
-<Route author="MoguCloud" example="/gcores/category/1" path="/gcores/category/:category" :paramsDesc="['分类名']">
+<Route author="MoguCloud" example="/gcores/category/news" path="/gcores/category/:category" :paramsDesc="['分类名']">
 
-| 文章 | 新闻 | 电台 |
-| ---- | ---- | ---- |
-| 1    | 2    | 9    |
+| 资讯 | 视频   | 电台   | 文章     |
+| ---- | ------ | ------ | -------- |
+| news | videos | radios | articles |
 
 </Route>
 
@@ -547,6 +557,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 首页
 
 <Route author="LogicJake" example="/whalegogo/home" path="/whalegogo/home"/>
+
+## 巨潮资讯
+
+### 公司公告
+
+<Route author="LogicJake" example="/cninfo/stock_announcement/000410" path="/cninfo/stock_announcement/:code" :paramsDesc="['股票代码']"/>
 
 ## 决胜网
 
@@ -599,6 +615,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 马良行
 
 <Route author="junfengP" example="/mlhang" path="/mlhang" />
+
+## 镁客网 im2maker
+
+### 镁客网频道
+
+<Route author="jin12180000" example="/im2maker/" path="/ifanr/:channel?" :paramsDesc="['默认不填为 最新文章 ，频道如下']">
+
+| 最新文章 | 行业快讯 | 行业观察 | 镁客请讲 | 硬科技 100 人 | 投融界   | 万象       |
+| -------- | -------- | -------- | -------- | ------------- | -------- | ---------- |
+| 默认空   | fresh    | industry | talk     | intech        | investor | everything |
+
+</Route>
 
 ## 每日安全
 
@@ -886,6 +914,16 @@ type 为 all 时，category 参数不支持 cost 和 free
 | hot      | pop         | week         | rising   | monthhonor |
 
 </Route>
+
+## 香水时代
+
+### 首页
+
+<Route author="kt286" example="/nosetime/home" path="/nosetime/home"/>
+
+### 香评
+
+<Route author="kt286" example="/nosetime/59247733/discuss/new" path="/nosetime/:id/:type/:sort?" :paramsDesc="['用户id，可在用户主页 URL 中找到', '类型，short 一句话香评  discuss 香评', '排序， new 最新  agree 最有用']"/>
 
 ## 新浪专栏
 

@@ -270,6 +270,26 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 </Route>
 
+## wikiHow
+
+### 首页
+
+<Route author="sanmmm" example="/wikihow/index" path="/wikihow/index"/>
+
+### 分类目录
+
+<Route author="sanmmm" example="/wikihow/category/饮食与休闲/" path="/wikihow/category/:category/:type" :paramsDesc="['目录分类', '类型']">
+
+顶级目录分类可在目录分类页[查看](https://zh.wikihow.com/Special:CategoryListing), 支持二级目录
+
+类型
+
+| 所有 | 推荐 |
+| ---- | ---- |
+| all  | rec  |
+
+</Route>
+
 ## ZAKER
 
 ### source
@@ -782,7 +802,9 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 专题
 
 <Route author="SunShinenny" example="/sspai/topics" path="/sspai/topics">
+
 此为专题广场更新提示=>集合型而非单篇文章.与下方"专题内文章更新"存在明显区别!
+
 </Route>
 
 ### 专题内文章更新
@@ -906,6 +928,17 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 </Route>
 
+## 万联网
+
+### 资讯
+
+<Route author="kt286" example="/10000link/news/My01" path="/10000link/news/:category?" :paramsDesc="['栏目代码, 默认为全部']">
+
+| 全部 | 天下大势 | 企业动态 | 专家观点 | 研究报告 |
+| ---- | -------- | -------- | -------- | -------- |
+| (空) | My01     | My02     | My03     | My04     |
+
+</Route>
 ## 维基百科
 
 ### 中国大陆新闻动态
@@ -960,6 +993,50 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="xapool" example="/sina/csj" path="/sina/csj"/>
 
+## 学堂在线
+
+### 课程信息
+
+<Route author="sanmmm" example="/xuetangx/course/course-v1:TsinghuaX+20240103X+2019_T1/status" path="/xuetangx/course/:cid/:type" :paramsDesc="['课程id, 从课程页URL中可得到', '课程信息类型']">
+
+课程信息类型
+
+| 课程开始时间 | 课程结束时间 | 课程进度 |
+| ------------ | ------------ | -------- |
+| start        | end          | status   |
+
+</Route>
+
+### 课程列表
+
+<Route author="sanmmm" example="/xuetangx/course/list/0/1/0" path="/xuetangx/course/list/:mode/:status/:credential/:type?" :paramsDesc="['课程模式', '课程状态', '课程认证类型', '学科分类 默认为`全部`']">
+
+课程模式
+
+| 自主 | 随堂 | 付费 | 全部 |
+| ---- | ---- | ---- | ---- |
+| 0    | 1    | 2    | -1   |
+
+课程状态
+
+| 即将开课 | 已开课 | 已结课 | 全部 |
+| -------- | ------ | ------ | ---- |
+| 1        | 2      | 3      | -1   |
+
+课程认证类型
+
+| 签字认证 | 认证开放 | 全部 |
+| -------- | -------- | ---- |
+| 1        | 2        | -1   |
+
+学科分类
+
+| 全部 | 计算机 | 经管·会计 | 创业 | 电子 | 工程 | 环境·地球 | 医学·健康 | 生命科学 | 数学 | 物理 | 化学 | 社科·法律 | 文学 | 历史 | 哲学 | 艺术·设计 | 外语 | 教育 | 其他 | 大学先修课 | 公共管理 | 建筑 | 职场 | 全球胜任力 |
+| ---- | ------ | --------- | ---- | ---- | ---- | --------- | --------- | -------- | ---- | ---- | ---- | --------- | ---- | ---- | ---- | --------- | ---- | ---- | ---- | ---------- | -------- | ---- | ---- | ---------- |
+| -1   | 117    | 118       | 119  | 120  | 121  | 122       | 123       | 124      | 125  | 126  | 127  | 128       | 129  | 130  | 131  | 132       | 133  | 134  | 135  | 201        | 2550     | 2783 | 2952 | 6200       |
+
+</Route>
+
 ## 异次元软件世界
 
 ### 首页
@@ -994,6 +1071,24 @@ type 为 all 时，category 参数不支持 cost 和 free
 | 75258        | 102804         | 75257        |
 
 </Route>
+
+## 正版中国
+
+### 分类列表
+
+<Route author="sanmmm" example="/getitfree/category/8" path="/getitfree/category/category?" :paramsDesc="['内容类型, 默认为`全部`']">
+
+类型
+
+| 全部文章 | 永久免费 | 限时折扣 | 限时免费 | PC  | Mac | Android | UWP |
+| -------- | -------- | -------- | -------- | --- | --- | ------- | --- |
+| all      | 311      | 309      | 310      | 8   | 50  | 17      | 312 |
+
+</Route>
+
+### 搜索
+
+<Route author="sanmmm" example="/getitfree/search/windows" path="/getitfree/search/:keyword" :paramsDesc="['搜索关键词']"/>
 
 ## 中国大学 MOOC(慕课)
 

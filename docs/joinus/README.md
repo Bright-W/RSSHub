@@ -490,7 +490,7 @@ ctx.state.data = {
 
 ## 提交新的 RSSHub Radar 规则
 
-在 [/assets/radar-rules.js](https://github.com/DIYgod/RSSHub/blob/master/assets/radar-rules.js) 里添加规则
+在 [/assets/radar-rules.js](https://github.com/DIYgod/RSSHub/blob/master/assets/radar-rules.js) 里添加规则，然后在 RSSHub 文档里给对应路径加上 `radar="1"`，这样会显示一个 `支持浏览器扩展` 标记
 
 下面说明中会用到的简化的规则：
 
@@ -571,6 +571,8 @@ ctx.state.data = {
 如 `Twitter 用户时间线` 规则的 `source` 为 `/:id`
 
 比如我们现在在 `https://twitter.com/DIYgod` 这个页面，`twitter.com/:id` 匹配成功，结果 params 为 `{id: 'DIYgod'}`，下一步中插件就会根据 params `target` `script` `verification` 字段生成 RSSHub 地址
+
+请注意 `source` 只可以匹配 URL Path，如果参数在 URL Param 和 URL Hash 里请使用 `target`
 
 ### target
 

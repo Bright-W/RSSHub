@@ -384,6 +384,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="LogicJake" example="/kpmg/insights" path="/kpmg/insights" />
 
+## 币世界
+
+### 快讯
+
+<Route author="kt286" example="/bishijie/kuaixun" path="/bishijie/kuaixun"/>
+
 ## 播客 IBC 岩手放送｜ IBC ラジオ　イヤーマイッタマイッタ
 
 ### IBC 岩手放送｜ IBC ラジオ　イヤーマイッタマイッタ
@@ -433,6 +439,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 用户
 
 <Route author="brilon"  example="/dianping/user/35185271" path="/dianping/user/:id" :paramsDesc="['用户id，可在 URL 中找到']"/>
+
+## 单向空间
+
+### 单读
+
+<Route author="KeNorizon" example="/owspace/read/0" path="/owspace/read/:type?" :paramsDesc="['栏目分类，不填则默认为首页']">
+
+| 首页 | 文字 | 影像 | 声音 | 单向历 | 谈论 |
+| ---- | ---- | ---- | ---- | ------ | ---- |
+| 0    | 1    | 2    | 3    | 4      | 6    |
+
+</Route>
 
 ## 电商在线
 
@@ -519,7 +537,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 王垠-当然我在扯淡
 
-<Route author="junbaor" example="/blogs/wangyin" path="/blogs/wangyin"/>
+<Route author="junbaor SkiTiSu" example="/blogs/wangyin" path="/blogs/wangyin"/>
 
 ## 古诗文网
 
@@ -563,9 +581,9 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="ciaranchen" example="/houxu/lives/new" path="/houxu/lives/:type" :paramsDesc="['类型']">
 
-| Live 实时（往事进展） | 最近 Live（最新关注） |
-| --------------------- | --------------------- |
-| realtime              | new                   |
+| 往事进展 | 最新添加 |
+| -------- | -------- |
+| realtime | new      |
 
 </Route>
 
@@ -728,6 +746,36 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 商道
 
 <Route author="qiwihui" example="/paidai/news" path="/paidao/news" />
+
+## 品玩
+
+### 实时要闻
+
+<Route author="sanmmm" example="/pingwest/status" path="/pingwest/status"/>
+
+### 话题动态
+
+<Route author="sanmmm" path="/pingwest/tag/:tag/:type" example="/pingwest/tag/ChinaJoy/1" :paramsDesc="['话题名或话题id, 可从话题页url中得到', '内容类型']">
+
+内容类型
+
+| 最新 | 最热 |
+| ---- | ---- |
+| 1    | 2    |
+
+</Route>
+
+### 用户
+
+<Route author="sanmmm" path="/pingwest/user/:uid/:type?" example="/pingwest/user/7781550877/article" :paramsDesc="['用户id, 可从用户主页中得到', '内容类型, 默认为`article`']">
+
+内容类型
+
+| 文章    | 动态  |
+| ------- | ----- |
+| article | state |
+
+</Route>
 
 ## 且听风吟福利
 
@@ -1193,7 +1241,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 字幕列表
 
-<Route author="sanmmm" example="/zimuzu/mv" path="/zimuzu/:type?" :paramsDesc="['类型, 默认为`mv`电影']">
+<Route author="sanmmm" example="/zimuku/mv" path="/zimuku/:type?" :paramsDesc="['类型, 默认为`mv`电影']">
 
 类型
 

@@ -6,6 +6,10 @@ pageClass: routes
 
 ## 36kr
 
+### 快讯
+
+<Route author="hillerliao" example="/36kr/newsflashes" path="/36kr/newsflashes" />
+
 ### 搜索文章
 
 <Route author="xyqfer kt286" example="/36kr/search/article/ofo" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
@@ -226,6 +230,12 @@ pageClass: routes
 | topic    | news     | technews   | blockchain | daily    |
 
 </Route>
+
+## SANS Institute
+
+### 最新会议材料
+
+<Route author="sbilly" example="/sans/summit_archive" path="/sans/summit_archive" />
 
 ## sixthtone
 

@@ -122,6 +122,12 @@ pageClass: routes
 
 <Route author="DIYgod" example="/rsshub/rss" path="/rsshub/rss" radar="1"/>
 
+## sketch.com
+
+### beta 更新
+
+<Route author="Jeason0228" example="/sketch/beta" path="/sketch/beta"  />
+
 ## Thunderbird
 
 ### 更新日志

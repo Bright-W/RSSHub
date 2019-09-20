@@ -414,4 +414,37 @@
             },
         ],
     },
+    'ishuhui.com': {
+        _name: '鼠绘漫画',
+        www: [
+            {
+                title: '鼠绘漫画',
+                docs: 'https://docs.rsshub.app/anime.html#%E9%BC%A0%E7%BB%98%E6%BC%AB%E7%94%BB',
+                source: '/comics/anime/:id',
+                target: '/shuhui/comics/:id',
+            },
+        ],
+    },
+    'haimaoba.com': {
+        _name: '海猫吧',
+        www: [
+            {
+                title: '漫画更新',
+                docs: 'https://docs.rsshub.app/anime.html#%E6%B5%B7%E7%8C%AB%E5%90%A7',
+                source: '/catalog/:id',
+                target: '/haimaoba/:id',
+            },
+        ],
+    },
+    'pgyer.com': {
+        _name: '蒲公英应用分发',
+        www: [
+            {
+                title: 'app更新',
+                docs: 'https://docs.rsshub.app/%E8%92%B2%E5%85%AC%E8%8B%B1%E5%BA%94%E7%94%A8%E5%88%86%E5%8F%91',
+                source: '/:app',
+                target: '/pgyer/:app',
+            },
+        ],
+    },
 });

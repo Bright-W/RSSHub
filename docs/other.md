@@ -31,6 +31,12 @@ pageClass: routes
 
 <Route author="lalxyy" example="/checkee/2019-03" path="/checkee/:month" :paramsDesc="['签证被 check 的年份-月份，如 2019-03']" />
 
+## ClickMe
+
+### 文章
+
+<Route author="hoilc" example="/clickme/default/category/beauty" path="/clickme/:site/:grouping/:name" :paramsDesc="['站点, `default`为普通站, `r18`为成人站, 其它值默认为普通站','分组方式, `category`为分类, `tag`为标签, 其他值默认为分类','分类名或标签名, 分类名为英文, 可以在分类 URL 中找到']" />
+
 ## DHL
 
 ### DHL 国际快递包裹追踪
@@ -209,6 +215,11 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 </Route>
 
+## 电鸭社区
+
+### 工作机会
+
+<Route author="sfyumi" example="/eleduck/jobs" path="/eleduck/jobs"/>
 ## 福利资源-met.red
 
 ### 福利资源-met.red
@@ -220,6 +231,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 首页推荐
 
 <Route author="LogicJake" example="/gushiwen/recommend" path="/gushiwen/recommend"/>
+
+## 好队友
+
+### 工作机会
+
+<Route author="lotosbin" example="/network360/jobs" path="/network360/jobs"/>
 
 ## 惠誉评级
 
@@ -323,6 +340,10 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="Jeason0228" example="/sse/renewal" path="/sse/renewal"/>
 
+### 监管问询
+
+<Route author="Jeason0228" example="/sse/inquire" path="/sse/inquire"/>
+
 ## 深圳证券交易所
 
 ### 上市公告-可转换债券
@@ -374,6 +395,16 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 新闻动态
 
 <Route author="kt286" example="/tprtc/news" path="/tprtc/news"/>
+
+## 新田惠海官方网站
+
+### 最近的更新
+
+<Route author="luyuhuang" example="/emi-nitta/updates" path="/emi-nitta/updates"/>
+
+### 新闻
+
+<Route author="luyuhuang" example="/emi-nitta/news" path="/emi-nitta/news"/>
 
 ## 油价
 

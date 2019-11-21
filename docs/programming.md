@@ -158,7 +158,7 @@ GitHub 官方也提供了一些 RSS:
 
 ### Discussion
 
-<Route author="LogicJake" example="/kaggle/discussion/387811/active" path="/kaggle/discussion/:forumId/:sort?" :paramsDesc="['讨论区 id, 打开网页请求, 搜索 forumId', '排序方式见下表, 默认为 hot']">
+<Route author="LogicJake" example="/kaggle/discussion/387811/active" path="/kaggle/discussion/:forumId/:sort?" :paramsDesc="['讨论区 id, 打开网页请求, 搜索 forumId；填 all 可以订阅全站讨论区', '排序方式见下表, 默认为 hot']">
 
 | hot     | recent          | new             | top        | active        |
 | ------- | --------------- | --------------- | ---------- | ------------- |
@@ -239,6 +239,18 @@ GitHub 官方也提供了一些 RSS:
 ### 最新发布
 
 <Route author="xyqfer" example="/testerhome/newest" path="/testerhome/newest"/>
+
+## Visual Studio Code Marketplace
+
+### Visual Studio Code 插件
+
+<Route author="SeanChao" example="/vscode/marketplace" path="/vscode/marketplace/:category?" :paramsDesc="['分类']">
+
+| Featured | Trending Weekly | Trending Monthly | Trending Daily | Most Popular | Recently Added |
+| -------- | --------------- | ---------------- | -------------- | ------------ | -------------- |
+| featured | trending        | trending_m       | trending_d     | popular      | new            |
+
+</Route>
 
 ## 阿里云
 

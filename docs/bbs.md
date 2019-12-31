@@ -54,6 +54,12 @@ pageClass: routes
 
 <Route author="kt286" example="/v2ex/post/584403" path="/v2ex/post/:postid" :paramsDesc="['帖子ID，在 URL 可以找到']"/>
 
+## 电鸭社区
+
+### 工作机会
+
+<Route author="sfyumi" example="/eleduck/jobs" path="/eleduck/jobs"/>
+
 ## 虎扑
 
 ### 虎扑 BBS 论坛
@@ -177,7 +183,7 @@ pageClass: routes
 
 ### 录取结果
 
-<Route author="NavePnow" example="/1point3acres/offer/12/1/CMU" path="/1point3acres/offer/:year?/:major?/:school?" :paramsDesc="['录取年份  id ', '录取专业 id', '录取学校 id']">
+<Route author="NavePnow" example="/1point3acres/offer/12/null/CMU" path="/1point3acres/offer/:year?/:major?/:school?" :paramsDesc="['录取年份  id，空为null', '录取专业 id，空为null', '录取学校 id，空为null']">
 ::: warning 三个 id 获取方式
 
 1. 打开 https://offer.1point3acres.com

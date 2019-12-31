@@ -934,6 +934,19 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 
 </Route>
 
+## 武汉大学
+
+### 计算机学院公告
+
+<Route author="SweetDumpling" example="/whu/cs/2" path="/whu/cs/:type"
+:paramsDesc="['公告类型, 详见表格']">
+
+| 公告类型 | 新闻动态 | 学术讲座 | 学院通知 | 公示公告 |
+| -------- | -------- | -------- | -------- | -------- |
+| 参数     | 0        | 1        | 2        | 3        |
+
+</Route>
+
 ## 西安电子科技大学
 
 ### 教务处

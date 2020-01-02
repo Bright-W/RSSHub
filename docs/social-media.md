@@ -4,6 +4,12 @@ pageClass: routes
 
 # 社交媒体
 
+## 755
+
+### 用户时间线
+
+<Route author="hoilc" example="/755/user/akimoto-manatsu" path="/755/user/:username" :paramsDesc="['用户名, 可在 URL 中找到']"/>
+
 ## bilibili
 
 ::: tip Tiny Tiny RSS 用户请注意
@@ -248,6 +254,10 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="hoilc" example="/bilibili/readlist/25611" path="/bilibili/readlist/:listid" :paramsDesc="['文集 id, 可在专栏文集 URL 中找到']"/>
 
+### B 站每周必看
+
+<Route author="ttttmr" example="/bilibili/weekly" path="/bilibili/weekly/:disableEmbed?" :paramsDesc="['默认为开启内嵌视频, 任意值为关闭']"/>
+
 ## Disqus
 
 ### 评论
@@ -295,6 +305,12 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 | new  | date | week | month | total |
 | ---- | ---- | ---- | ----- | ----- |
 | 最新 | 日榜 | 周榜 | 月榜  | 总榜  |
+
+## Mastodon
+
+### 实例公共时间线
+
+<Route author="hoilc" example="/mastodon/timeline/pawoo.net/true" path="/mastodon/timeline/:site/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
 
 ## pixiv
 
@@ -694,7 +710,7 @@ rule
 
 ### 个人时间线
 
-<Route author="zytomorrow DIYgod" example="/weibo/timeline/3306934123" path="/weibo/timeline/:uid/:feature?" :paramsDesc="['用户的uid', '	过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。']">
+<Route author="zytomorrow DIYgod" example="/weibo/timeline/3306934123" path="/weibo/timeline/:uid/:feature?" :paramsDesc="['用户的uid', '	过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。']" anticrawler="1">
 
 ::: warning 注意
 

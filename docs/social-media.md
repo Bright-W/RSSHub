@@ -292,11 +292,9 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ## Lofter
 
-::: tip 提示
+### 用户
 
-官方提供了用户主页 RSS: http://**:username**.lofter.com/rss
-
-:::
+<Route author="hondajojo" example="/lofter/user/tingtingtingtingzhi" path="/lofter/user/:name" :paramsDesc="['Lofter 用户名, 在URL里']"/>
 
 ### 话题(标签)
 
@@ -307,6 +305,14 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 | 最新 | 日榜 | 周榜 | 月榜  | 总榜  |
 
 ## Mastodon
+
+::: tip 提示
+
+官方提供了用户时间线 RSS: https://**:instance**/users/**:username**.atom 或 https://**:instance**/users/**:username**.rss
+
+例如：https://pawoo.net/users/pawoo_support.atom 或 https://pawoo.net/users/pawoo_support.rss
+
+:::
 
 ### 实例公共时间线
 
@@ -418,6 +424,10 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="DIYgod" example="/twitter/keyword/RSSHub" path="/twitter/keyword/:keyword" :paramsDesc="['关键词']" radar="1"/>
 
+### Trends
+
+<Route author="sakamossan" example="/twitter/trends/23424856" path="/twitter/trends/:woeid?" :paramsDesc="['Where On Earth ID. 默认 woeid=1 (World Wide)']" radar="1"/>
+
 ## VueVlog
 
 ### 用户
@@ -522,7 +532,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### 豆瓣电影人
 
-<Route author="minimalistrojan" example="/douban/celebrity/1274261" path="/douban/celebrity/:id/:sort?" :paramsDesc="['电影人 id', '排序方式，缺省为 `time` (时间排序)，可为 `vote` (评价排序)']"/>
+<Route author="minimalistrojan" example="/douban/celebrity/1274261" path="/douban/celebrity/:id/:sort?" :paramsDesc="['电影人 id', '排序方式，缺省为 `time`（时间排序），可为 `vote` （评价排序）']"/>
 
 ### 豆瓣小组
 

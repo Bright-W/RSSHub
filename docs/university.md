@@ -164,13 +164,17 @@ pageClass: routes
 
 | 绿色要闻 | 校园动态 | 教学科研 | 党建思政 | 一周排行 |
 | -------- | -------- | -------- | -------- | -------- |
-| lsyw     | lsxy     | jxky     | djsz     | yzph     |
+| lsyw     | xydt     | jxky     | djsz     | yzph     |
 
 </Route>
 
 ### 研究生院培养动态
 
 <Route author="markmingjie" example="/bjfu/grs" path="/bjfu/grs" />
+
+### 科技处通知公告
+
+<Route author="markmingjie" example="/bjfu/kjc" path="/bjfu/kjc" />
 
 ### 教务处通知公告
 
@@ -1677,6 +1681,14 @@ type 列表：
 
 <Route author="sanmmm" example="/cug/graduate" path="/cug/graduate" />
 
+### 中国地质大学通知公告
+
+<Route author="chunibyo-wly" example="/cug/undergraduate" path="/cug/undergraduate" />
+
+### 地理与信息工程学院综合通知公告
+
+<Route author="chunibyo-wly" example="/cug/xgxy" path="/cug/xgxy" />
+
 ## 中国海洋大学
 
 ### 信息科学与工程学院
@@ -1800,6 +1812,16 @@ type 列表：
 | 学院新闻 | 学院公告 | 学院活动 | 学术活动 |
 | -------- | -------- | -------- | -------- |
 | 1053     | 1054     | 1055     | 1056     |
+
+</Route>
+
+### 信息化办公室
+
+<Route author="Hagb" example="/cqu/net/tzgg" path="/cqu/net/:category" :paramsDesc="['分类名']">
+
+| 通知公告 | 单位动态 | 语言文字 |
+| -------- | -------- | -------- |
+| tzgg     | dwdt     | yywz     |
 
 </Route>
 

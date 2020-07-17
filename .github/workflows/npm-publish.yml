@@ -1,8 +1,10 @@
-name: format
+name: publish
 
 on:
   push:
     branches: master
+    paths:
+        - 'lib/**'
 
 jobs:
   build:
@@ -14,11 +16,13 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12'
-    - run: yarn install
-    - run: npm run format
-    - name: Commit files
+        registry-url: 'https://registry.npmjs.org'
+    - name: Release
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git status
-        git diff-index --quiet HEAD || (git commit -m "style: auto format" -a --no-verify && git push "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:master)
+        npx version-from-git --allow-same-version --template 'master.short'
+    - name: Publish to npmjs
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

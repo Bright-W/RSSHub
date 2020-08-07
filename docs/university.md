@@ -1409,6 +1409,12 @@ type 列表：
 
 <Route author="talenHuang" example="/sctu/jwc/13/645" path="/sctu/jwc/context/:type/:id" :paramsDesc="['通知类型','文章id']"/>
 
+## 四川职业技术学院
+
+### 学院公告
+
+<Route author="nczitzk" example="/scvtc/xygg" path="/scvtc/xygg" />
+
 ## 天津大学
 
 ### 天津大学教务处
@@ -1718,6 +1724,16 @@ type 列表：
 | 公告栏 | 每周会议 | 屏峰班车 | 新闻速递 | 学术动态 |
 | ------ | -------- | -------- | -------- | -------- |
 | 1      | 2        | 3        | 10       | 25       |
+
+</Route>
+
+### 设计与建筑学院
+
+<Route author="yikZero" example="/zjut/design/5" path="/zjut/design/:type" :paramsDesc="['板块id']">
+
+| 学术科研 | 学院新闻 | 公告通知 | 学术交流 |
+| -------- | -------- | -------- | -------- |
+| 5        | 16       | 18       | 20       |
 
 </Route>
 

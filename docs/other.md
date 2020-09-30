@@ -247,7 +247,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 最近更新
 
-<Route author="nczitzk" example="/iqshw/latest" path="/iqshw/latest"/>
+<Route author="nczitzk" example="/3k8/latest" path="/3k8/latest"/>
 
 ## 爱发电
 
@@ -521,6 +521,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="cc798461" example="/moxingnet" path="/moxingnet"/>
 
+## 诺贝尔奖
+
+### 获奖名单
+
+<Route author="nczitzk" example="/nobelprize" path="/nobelprize/:caty" :paramsDesc="['类别，见下表，默认为全部']">
+
+| 物理学  | 化学      | 生理学或医学           | 文学       | 和平  | 经济学            |
+| ------- | --------- | ---------------------- | ---------- | ----- | ----------------- |
+| physics | chemistry | physiology-or-medicine | literature | peace | economic-sciences |
+
+</Route>
+
 ## 且听风吟福利
 
 ### 分类
@@ -642,6 +654,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 新闻动态
 
 <Route author="kt286" example="/tprtc/news" path="/tprtc/news"/>
+
+## 无讼案例
+
+### 案例
+
+<Route author="alienmao" example="/itslaw/judgements/regulation+1121495748+13+中华人民共和国公司法（2018）第二十一条" path="/itslaw/judgements/:conditions" :paramsDesc="['筛选条件，见示例']"/>
 
 ## 新冠肺炎疫情新闻动态
 

@@ -1,4 +1,8 @@
-***
+---
+pageClass: routes
+---
+
+# 二次元
 
 ## 005.tv
 
@@ -136,7 +140,7 @@
 
 ### 声优活动及演唱会
 
-<Route author="KTachibanaM" path="/eventernote/actors/:name/:id" example="/eventernote/actors/三森すずこ/2634" :paramsDesc="['声优姓名', '声优 ID']"/>
+<Route author="KTachibanaM" path="/eventernote/actors/:name/:id" example="/eventernote/actors/三森すずこ/2634" :paramsDesc="['声优姓名', '声优 ID']" radar="1" rssbud="1"/>
 
 ## Hanime.tv
 

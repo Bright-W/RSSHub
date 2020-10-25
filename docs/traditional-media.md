@@ -1,4 +1,8 @@
-***
+---
+pageClass: routes
+---
+
+# 传统媒体
 
 ## 21 财经
 
@@ -36,8 +40,8 @@
 
 支持大部分频道，频道名称见[BBC 官方 RSS](https://www.bbc.co.uk/news/10628494)。
 
-*   频道为单一路径，如 `https://feeds.bbci.co.uk/news/business/rss.xml` 则为 `/bbc/business`.
-*   频道包含多重路径，如 `https://feeds.bbci.co.uk/news/world/asia/rss.xml` 则替换 `/` 为 `-` `/bbc/world-asia`.
+-   频道为单一路径，如 `https://feeds.bbci.co.uk/news/business/rss.xml` 则为 `/bbc/business`.
+-   频道包含多重路径，如 `https://feeds.bbci.co.uk/news/world/asia/rss.xml` 则替换 `/` 为 `-` `/bbc/world-asia`.
 
 </Route>
 
@@ -47,15 +51,15 @@
 
 通过提取文章全文，以提供比官方源更佳的阅读体验.
 
-支持大部分频道，频道名称见[BBC 中文网官方 RSS](https://www.bbc.com/zhongwen/simp/services/2009/09/000000\_rss)。
+支持大部分频道，频道名称见[BBC 中文网官方 RSS](https://www.bbc.com/zhongwen/simp/services/2009/09/000000_rss)。
 
 简体版：
 
-*   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/simp/business/index.xml` 则为 `/bbc/chinese/business`.
+-   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/simp/business/index.xml` 则为 `/bbc/chinese/business`.
 
 繁体版：
 
-*   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/trad/business/index.xml` 则为 `/bbc/traditionalchinese/business`.
+-   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/trad/business/index.xml` 则为 `/bbc/traditionalchinese/business`.
 
 </Route>
 
@@ -101,8 +105,8 @@
 
 ::: tip 提示
 
-*   不支持付费文章.
-*   由于未知原因 FT 中文网的 SSL 证书不被信任 (参见[SSL Labs 报告](https://www.ssllabs.com/ssltest/analyze.html?d=www.ftchinese.com\&latest)), 所有文章通过 http 协议获取.
+-   不支持付费文章.
+-   由于未知原因 FT 中文网的 SSL 证书不被信任 (参见[SSL Labs 报告](https://www.ssllabs.com/ssltest/analyze.html?d=www.ftchinese.com&latest)), 所有文章通过 http 协议获取.
 
 :::
 
@@ -110,8 +114,8 @@
 
 支持所有频道，频道名称见[官方频道 RSS](http://www.ftchinese.com/channel/rss.html).
 
-*   频道为单一路径，如 `http://www.ftchinese.com/rss/news` 则为 `/ft/chinese/news`.
-*   频道包含多重路径，如 `http://www.ftchinese.com/rss/column/007000002` 则替换 `/` 为 `-` `/ft/chinese/column-007000002`.
+-   频道为单一路径，如 `http://www.ftchinese.com/rss/news` 则为 `/ft/chinese/news`.
+-   频道包含多重路径，如 `http://www.ftchinese.com/rss/column/007000002` 则替换 `/` 为 `-` `/ft/chinese/column-007000002`.
 
 </Route>
 
@@ -120,10 +124,6 @@
 ### News Web Easy
 
 <Route author="Andiedie" example="/nhk/news_web_easy" path="/nhk/news_web_easy"/>
-
-## pageClass: routes
-
-# 传统媒体
 
 ## Solidot
 
@@ -135,7 +135,7 @@
 
 Solidot 提供的 feed:
 
-*   <https://www.solidot.org/index.rss>
+-   <https://www.solidot.org/index.rss>
 
 :::
 
@@ -176,6 +176,14 @@ Solidot 提供的 feed:
 ### GRE Vocabulary
 
 <Route author="xyqfer" example="/the-economist/gre-vocabulary" path="/the-economist/gre-vocabulary" />
+
+### 下载
+
+<Route author="nczitzk" example="/the-economist/download" path="/the-economist/download" >
+
+下载站：<http://www.cgx02.xyz/index.php?dir=/te>
+
+</Route>
 
 ## Yahoo
 
@@ -422,37 +430,37 @@ category 对应的关键词有
 
 支持语言列表
 
-*   中国分站 `cn`：
+-   中国分站 `cn`：
 
-    *   主频道:
+    -   主频道:
 
     | 深度分析 | 时事要闻    | 生活 | 投资      |
     | -------- | ----------- | ---- | --------- |
     | analyses | generalnews | life | investing |
 
-    *   资讯子频道:
+    -   资讯子频道:
 
     | 中国财经 | 国际财经              | 新闻人物  | 财经视点 |
     | -------- | --------------------- | --------- | -------- |
     | china    | internationalbusiness | newsmaker | opinions |
 
-    *   专栏子频道:
+    -   专栏子频道:
 
     | 中国财经专栏 | 国际财经专栏 | 大宗商品专栏 |
     | ------------ | ------------ | ------------ |
     | CnColumn     | IntColumn    | ComColumn    |
 
-*   美国分站 `us`：
+-   美国分站 `us`：
 
-    *   主频道:
+    -   主频道:
 
     | Business | Markets | World | Politics | Tech       | Breakingviews | Wealth | Life      |
     | -------- | ------- | ----- | -------- | ---------- | ------------- | ------ | --------- |
     | business | markets | world | politics | technology | breakingviews | wealth | lifestyle |
 
-*   英国分站 `uk`：
+-   英国分站 `uk`：
 
-    *   主频道:
+    -   主频道:
 
     | Business | Markets | World | UK | Tech       | Money           | Breakingviews | Sport  | Life      |
     | -------- | ------- | ----- | -- | ---------- | --------------- | ------------- | ------ | --------- |
@@ -706,6 +714,18 @@ category 对应的关键词有
 ### 滚动新闻
 
 <Route author="xyqfer" example="/sina/rollnews" path="/sina/rollnews" />
+
+## 新浪体育
+
+### 综合
+
+<Route author="nczitzk" example="/sina/sports/volley" path="/sina/sports/:type" :paramsDesc="['运动类型，见下表']">
+
+| 排球   | 游泳 | 乒乓球   | 羽毛球 | 台球    | 田径     | 体操  | 冰雪   | 射击 | 马术  | 拳击搏击 | UFC | 其他   |
+| ------ | ---- | -------- | ------ | ------- | -------- | ----- | ------ | ---- | ----- | -------- | --- | ------ |
+| volley | swim | pingpang | badmin | snooker | tianjing | ticao | winter | sh   | mashu | kungfu   | ufc | others |
+
+</Route>
 
 ## 央视新闻
 

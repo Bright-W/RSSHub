@@ -1,4 +1,8 @@
-***
+---
+pageClass: routes
+---
+
+# 编程
 
 ## AI 研习社
 
@@ -68,10 +72,10 @@
 
 GitHub 官方也提供了一些 RSS:
 
-*   仓库 releases: `https://github.com/:owner/:repo/releases.atom`
-*   仓库 commits: `https://github.com/:owner/:repo/commits.atom`
-*   用户动态: `https://github.com/:user.atom`
-*   专属动态: `https://github.com/:user.private.atom?token=:secret` (登录后在[仪表盘页面](https://github.com)找到 **Subscribe to your news feed** 字样即可)
+-   仓库 releases: `https://github.com/:owner/:repo/releases.atom`
+-   仓库 commits: `https://github.com/:owner/:repo/commits.atom`
+-   用户动态: `https://github.com/:user.atom`
+-   专属动态: `https://github.com/:user.private.atom?token=:secret` (登录后在[仪表盘页面](https://github.com)找到 **Subscribe to your news feed** 字样即可)
 
 :::
 
@@ -111,9 +115,9 @@ GitHub 官方也提供了一些 RSS:
 | -------- | -------- | -------- | --------------- |
 | `DIYgod` | `RSSHub` | `master` | `lib/router.js` |
 
-> *   **分支名**中如果有 `/` 等特殊字符需使用 urlencode 进行编码，通常 `/` 需要被替换成 `%2f`
-> *   **文件路径**中如果有特殊字符同样需使用 urlencode 进行编码，但文件路径可以正常识别 `/` 字符
-> *   **文件路径**如果以 `.rss`, `.atom`, `.json` 结尾，需要将后缀中的 `.` 替换成 `%2e`
+> -   **分支名**中如果有 `/` 等特殊字符需使用 urlencode 进行编码，通常 `/` 需要被替换成 `%2f`
+> -   **文件路径**中如果有特殊字符同样需使用 urlencode 进行编码，但文件路径可以正常识别 `/` 字符
+> -   **文件路径**如果以 `.rss`, `.atom`, `.json` 结尾，需要将后缀中的 `.` 替换成 `%2e`
 >     > Reeder 订阅 `%2erss` 或类似后缀的时候会出错，此时再在路由后面加上 `.rss` 即可正常订阅
 >     >
 >     > 如： `https://rsshub.app/github/file/DIYgod/RSSHub/master/lib/router%2ejs` 替换成 `https://rsshub.app/github/file/DIYgod/RSSHub/master/lib/router%2ejs.rss` 即可
@@ -292,10 +296,6 @@ GitHub 官方也提供了一些 RSS:
 
 </Route>
 
-## pageClass: routes
-
-# 编程
-
 ## project-zero issues
 
 ### issues
@@ -413,8 +413,8 @@ GitHub 官方也提供了一些 RSS:
 
 <Route author="zhangzhxb520" example="/geektime/news" path="/geektime/news"/>
 
-> *   极客时间专栏需要付费订阅，RSS 仅做更新提醒，不含付费内容.
-> *   极客新闻不需要付费，可通过 RSS 订阅.
+> -   极客时间专栏需要付费订阅，RSS 仅做更新提醒，不含付费内容.
+> -   极客新闻不需要付费，可通过 RSS 订阅.
 
 ## 技术头条
 
@@ -658,6 +658,11 @@ GitHub 官方也提供了一些 RSS:
 ### posts
 
 <Route author="hellodword" example="/galaxylab" path="/galaxylab">
+</Route>
+
+## 前端技术文章
+
+<Route author="laampui" example="/front-end-rss" path="/front-end-rss" :paramsDesc="['分类']">
 </Route>
 
 ## 前端艺术家 && 飞冰早报

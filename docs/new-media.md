@@ -1,4 +1,8 @@
-***
+---
+pageClass: routes
+---
+
+# 新媒体
 
 ## 199IT
 
@@ -318,10 +322,6 @@ Tag
 
 <Route author="emdoe" example="/nautilus/topic/Art" path="/nautilus/topic/:tid" :paramsDesc="['话题 id, 可在页面上方 TOPICS 栏目处找到']"/>
 
-## pageClass: routes
-
-# 新媒体
-
 ## PMCAFF
 
 ### 今日推荐 / 精选
@@ -390,13 +390,13 @@ Tag
 
 <Route author="zoenglinghou" example="/soomal/topics/最新文章" path="/soomal/topics/:category/:language?" :paramsDesc="['话题，可在顶部菜单找到对应名称', '语言，默认为简体中文']">
 
-*   可选语言：
+-   可选语言：
 
 | 简体中文 | 正体中文 | 英语 |
 | -------- | -------- | ---- |
 | zh       | zh_tw    | en   |
 
-*   可选话题（按语言分类）：
+-   可选话题（按语言分类）：
 
 | 语言     |          |       |          |          |          |              |
 | -------- | -------- | ----- | -------- | -------- | -------- | ------------ |
@@ -404,9 +404,9 @@ Tag
 | 正体中文 | 最新文章 | 科普  | 測評報告 | 發燒入門 | 攝影入門 | 古典音樂入門 |
 | 英语     | Phone    | Audio | Album    | Review   |          |              |
 
-*   Soomal 提供官方 RSS 订阅
-    *   Soomal 网站更新：<http://www.soomal.com/doc/101.rss.xml>
-    *   Soomal 论坛与留言系统的更新：<http://www.soomal.com/bbs/101.rss.xml>
+-   Soomal 提供官方 RSS 订阅
+    -   Soomal 网站更新：<http://www.soomal.com/doc/101.rss.xml>
+    -   Soomal 论坛与留言系统的更新：<http://www.soomal.com/bbs/101.rss.xml>
 
 </Route>
 
@@ -458,8 +458,8 @@ Supported sub-sites:
 
 <Route author="HenryQW" example="/ifanr/app" path="/ifanr/:channel?" :paramsDesc="['默认 app，部分频道如下']">
 
-*   频道为单一路径，如 <https://www.ifanr.com/`coolbuy`> 则为 `/ifanr/coolbuy`.
-*   频道包含多重路径，如 <https://www.ifanr.com/`category/intelligentcar`> 则替换 `/` 为 `-` `/ifanr/category-intelligentcar`.
+-   频道为单一路径，如 <https://www.ifanr.com/`coolbuy`> 则为 `/ifanr/coolbuy`.
+-   频道包含多重路径，如 <https://www.ifanr.com/`category/intelligentcar`> 则替换 `/` 为 `-` `/ifanr/category-intelligentcar`.
 
 | AppSolution | 玩物志  | 董车会                  |
 | ----------- | ------- | ----------------------- |
@@ -514,6 +514,10 @@ Supported sub-sites:
 ### 欅坂 46 博客
 
 <Route author="nwindz" example="/keyakizaka46/blog" path="/keyakizaka46/blog" />
+
+### 櫻坂 46 博客
+
+<Route author="victor21813" example="/sakurazaka46/blog" path="/sakurazaka46/blog" />
 
 ### 日向坂 46 新闻
 
@@ -625,7 +629,7 @@ area 分区选项
 
 ::: tip 提示
 
-*   可以通过头条新闻 + 参数过滤的形式获得早报、专题等内容。
+-   可以通过头条新闻 + 参数过滤的形式获得早报、专题等内容。
 
 :::
 
@@ -948,7 +952,7 @@ area 分区选项
 | 网址                                                                                              | 对应路由 |
 | ------------------------------------------------------------------------------------------------- | -------- |
 | kuai.media                                                                                        | /kuai    |
-| [www.kuai.media/portal.php?mod=list\&catid=38](http://www.kuai.media/portal.php?mod=list\&catid=38) | /kuai/38 |
+| [www.kuai.media/portal.php?mod=list&catid=38](http://www.kuai.media/portal.php?mod=list&catid=38) | /kuai/38 |
 
 ## 快知
 
@@ -1119,6 +1123,10 @@ area 分区选项
 更多的 cid 可通过访问[官网](http://home.qutoutiao.net)切换分类，观察 url 获得。
 
 </Route>
+
+## 全现在
+
+<Route author="nczitzk" example="/allnow/column/199" path="/allnow/column/:id" :paramsDesc="['专栏 id']"/>
 
 ## 人人都是产品经理
 
@@ -1377,7 +1385,7 @@ area 分区选项
 
 ### 公众号 (二十次幂来源)
 
-<Route author="sanmmm" example="/wechat/ershicimi/59" path="/wechat/ershicimi/:id" :paramsDesc="['公众号id, 打开公众号页, 在 URL 中找到 id']"/>
+<Route author="sanmmm" example="/wechat/ershicimi/813oxJOl" path="/wechat/ershicimi/:id" :paramsDesc="['公众号id, 打开公众号页, 在 URL 中找到 id']" anticrawler="1"/>
 
 ### 公众号 (外接大脑来源)
 
@@ -1389,7 +1397,7 @@ area 分区选项
 
 只适用拥有首页模板 (分享链接带有 homepage) 的公众号。例如从公众号分享出来的链接为 <https://mp.weixin.qq.com/mp/homepage?__biz=MzA3MDM3NjE5NQ==&hid=4>，`biz` 为 `MzA3MDM3NjE5NQ==`，`hid` 为 `4`。
 
-有些页面里会有分栏， `cid` 可以通过元素选择器选中栏目查看`data-index`。如[链接](https://mp.weixin.qq.com/mp/homepage?\__biz=MzA3MDM3NjE5NQ==\&hid=4)里的 `京都职人` 栏目的 `cid` 为 `0`，`文艺时光` 栏目的 `cid` 为 `2`。如果不清楚的话最左边的栏目为`0`，其右方栏目依次递增 `1`。
+有些页面里会有分栏， `cid` 可以通过元素选择器选中栏目查看`data-index`。如[链接](https://mp.weixin.qq.com/mp/homepage?__biz=MzA3MDM3NjE5NQ==&hid=4)里的 `京都职人` 栏目的 `cid` 为 `0`，`文艺时光` 栏目的 `cid` 为 `2`。如果不清楚的话最左边的栏目为`0`，其右方栏目依次递增 `1`。
 
 </Route>
 
@@ -1532,7 +1540,7 @@ area 分区选项
 
 QueryString:
 
-*   `sort`：排序方式
+-   `sort`：排序方式
 
 | 根据创建时间（默认） | 根据回复时间 | 根据热度 |
 | -------------------- | ------------ | -------- |

@@ -1,4 +1,8 @@
-***
+---
+pageClass: routes
+---
+
+# 游戏
 
 ## 3DMGame
 
@@ -53,6 +57,48 @@
 ### News
 
 <Route author="nczitzk" example="/fgo/news" path="/fgo/news"/>
+
+## GameRes 游资网
+
+### 热点推荐
+
+<Route author="nczitzk" example="/gameres/hot" path="/gameres/hot"/>
+
+### 列表
+
+<Route author="nczitzk" example="/gameres/list/26" path="/gameres/list/:id" :paramsDesc="['列表 id']">
+
+产业
+
+| 厂商・专访 | 观察・投资 | 产品 | 政策 | 电子竞技 | 直播 | 区块链 |
+| ---------- | ---------- | ---- | ---- | -------- | ---- | ------ |
+| 1          | 11         | 6    | 45   | 14       | 42   | 41     |
+
+平台
+
+| 手游 | 页游・H5 | 端游・PC | 主机 | 虚拟・VR・AR | 云游戏 |
+| ---- | -------- | -------- | ---- | ------------ | ------ |
+| 5    | 17       | 18       | 21   | 16           | 48     |
+
+研发
+
+| 拆解分析 | 策划 | 程序・引擎 | 美术 | 音乐 | 测试 |
+| -------- | ---- | ---------- | ---- | ---- | ---- |
+| 24       | 25   | 26         | 27   | 28   | 29   |
+
+市场
+
+| 职场・创业 | 运营・渠道 | 海外 | 数据・报告 | App Store | Steam |
+| ---------- | ---------- | ---- | ---------- | --------- | ----- |
+| 38         | 34         | 47   | 33         | 46        | 40    |
+
+其他
+
+| 原创 | 硬件・周边 | 八卦 | 活动 | 综合 |
+| ---- | ---------- | ---- | ---- | ---- |
+| 43   | 44         | 15   | 22   | 39   |
+
+</Route>
 
 ## GNN.tw 游戏新闻
 
@@ -130,10 +176,6 @@
 
 <Route author="hoilc" example="/nintendo/system-update" path="/nintendo/system-update"/>
 
-## pageClass: routes
-
-# 游戏
-
 ## PlayStation
 
 ### PlayStation Store 游戏列表
@@ -152,7 +194,7 @@
 
 适用于 URL 如 <https://store.playstation.com/zh-hans-hk/product/HP4497-CUSA16570_00-ASIAFULLGAME0000> 的游戏。
 
-比如 PlayStation Store 香港简体中文区的 [《赛博朋克 2077》](https://store.playstation.com/zh-hans-hk/product/HP4497-CUSA16570\_00-ASIAFULLGAME0000) 的 lang 为 `zh-hans-hk`， gridName 为 `HP4497-CUSA16570_00-ASIAFULLGAME0000`
+比如 PlayStation Store 香港简体中文区的 [《赛博朋克 2077》](https://store.playstation.com/zh-hans-hk/product/HP4497-CUSA16570_00-ASIAFULLGAME0000) 的 lang 为 `zh-hans-hk`， gridName 为 `HP4497-CUSA16570_00-ASIAFULLGAME0000`
 
 </Route>
 
@@ -490,11 +532,26 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 
 ### 最终幻想 14 国服
 
-<Route author="Kiotlin" example="/ff14/ff14_zh/news" path="/ff14/ff14_zh/:type" :paramsDesc="['分类名']"/>
+<Route author="Kiotlin" example="/ff14/ff14_zh/news" path="/ff14/ff14_zh/:type" :paramsDesc="['分类名']">
 
 | 新闻 | 公告     | 活动   | 广告      | 所有 |
 | ---- | -------- | ------ | --------- | ---- |
 | news | announce | events | advertise | all  |
+
+</Route>
+
+### 最终幻想 14 国际服 （Lodestone）
+
+<Route author="chengyuhui" example="/ff14/ff14_global/na/all" path="/ff14/ff14_global/:lang/:type" :paramsDesc="['地区', '分类名']">
+| 北美 | 欧洲（英语） | 法国 | 德国 | 日本 |
+| ---- | ------------ | ---- | ---- | ---- |
+| na   | eu           | fr   | de   | jp   |
+
+| 话题   | 公告    | 维护        | 更新    | 服务状态 | 开发者博客 |
+| ------ | ------- | ----------- | ------- | -------- | ---------- |
+| topics | notices | maintenance | updates | status   | developers |
+
+</Route>
 
 ## きららファンタジア｜奇拉拉幻想曲
 

@@ -1,4 +1,8 @@
-***
+---
+pageClass: routes
+---
+
+# 社交媒体
 
 ## 755
 
@@ -64,7 +68,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 动画
 
-| MAD・AMV | MMD・3D | 短片・手书・配音 | 特摄 | 综合 |
+| MAD·AMV | MMD·3D | 短片・手书・配音 | 特摄 | 综合 |
 | ------- | ------ | ---------------- | ---- | ---- |
 | 24      | 25     | 47               | 86   | 27   |
 
@@ -82,7 +86,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 音乐
 
-| 原创音乐 | 翻唱 | VOCALOID・UTAU | 电音 | 演奏 | MV  | 音乐现场 | 音乐综合 | ~~OP/ED/OST~~ |
+| 原创音乐 | 翻唱 | VOCALOID·UTAU | 电音 | 演奏 | MV  | 音乐现场 | 音乐综合 | ~~OP/ED/OST~~ |
 | -------- | ---- | ------------- | ---- | ---- | --- | -------- | -------- | ------------- |
 | 28       | 31   | 30            | 194  | 59   | 193 | 29       | 130      | 54            |
 
@@ -104,9 +108,9 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 | -------- | -------- | ---- | -------- | -------- | ------------ |
 | 201      | 124      | 207  | 208      | 209      | 122          |
 
-\~~ 科技～～
+~~科技~~
 
-| ~~ 演讲・公开课～～| ~~ 星海～～| ~~ 机械～～| ~~ 汽车～～|
+| ~~演讲・公开课~~ | ~~星海~~ | ~~机械~~ | ~~汽车~~ |
 | ---------------- | -------- | -------- | -------- |
 | 39               | 96       | 98       | 176      |
 
@@ -134,9 +138,9 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 | ---- | ---- | ---- | ---- | ------ |
 | 157  | 158  | 164  | 159  | 192    |
 
-\~~ 广告～～
+~~广告~~
 
-| ~~ 广告～～|
+| ~~广告~~ |
 | -------- |
 | 166      |
 
@@ -282,6 +286,18 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="hoilc" example="/bilibili/manga/update/26009" path="/bilibili/manga/update/:comicid" :paramsDesc="['漫画 id, 可在 URL 中找到, 支持带有`mc`前缀']"/>
 
+## Dev.to
+
+### 最高职位
+
+<Route author="dwemerx" example="/dev.to/top/month" path="/dev.to/top/:period" :paramsDesc="['period']">
+
+| 开发到每周最高 | 开发至每月最高 | 开发年度最高 | 开发到有史以来最高职位 |
+| -------------- | -------------- | ------------ | ---------------------- |
+| week           | month          | year         | infinity               |
+
+</Route>
+
 ## Disqus
 
 ### 评论
@@ -326,8 +342,8 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 通常来说，各实例提供用户时间线的订阅源，如下：
 
-*   RSS: `https://**:instance**/users/**:username**.rss`
-*   Atom: ~~`https://**:instance**/users/**:username**.atom`~~ (仅 pawoo.net)
+-   RSS: `https://**:instance**/users/**:username**.rss`
+-   Atom: ~~`https://**:instance**/users/**:username**.atom`~~ (仅 pawoo.net)
 
 例如：<https://pawoo.net/users/pawoo_support.rss> 或 <https://pawoo.net/users/pawoo_support.atom>
 
@@ -350,10 +366,6 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 ### 用户公共时间线（备用）
 
 <Route author="notofoe" example="/mastodon/account_id/mastodon.social/23634/statuses/only_media" path="/mastodon/account/:site/:account_id/statuses/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '用户 ID. 登录实例后, 搜索用户并进入用户页, 在地址中可以找到这串数字', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
-
-## pageClass: routes
-
-# 社交媒体
 
 ## piapro
 
@@ -655,9 +667,9 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ::: tip 提示
 
-*   **目前只支持整数型 id**
-*   字母型的 id，可以通过头像图片链接来找到其整数型 id，图片命名规则`ul[userid]-*.jpg`或`u[userid]-*.jpg`，即取文件名中间的数字
-*   例如：用户 id: `MovieL`他的头像图片链接：`https://img1.doubanio.com/icon/ul1128221-98.jpg`他的整数型 id: `1128221`
+-   **目前只支持整数型 id**
+-   字母型的 id，可以通过头像图片链接来找到其整数型 id，图片命名规则`ul[userid]-*.jpg`或`u[userid]-*.jpg`，即取文件名中间的数字
+-   例如：用户 id: `MovieL`他的头像图片链接：`https://img1.doubanio.com/icon/ul1128221-98.jpg`他的整数型 id: `1128221`
 
 :::
 

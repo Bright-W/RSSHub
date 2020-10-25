@@ -1,4 +1,8 @@
-***
+---
+pageClass: routes
+---
+
+# 图片
 
 ## 1X
 
@@ -88,9 +92,9 @@
 
 ::: tip 提示
 
-*   tags 在 [konachan](https://konachan.com/post) URL 中 `tags=` 后的参数
-*   路由可选 `/konachan` 或 `/konachan.com` 或 `/konachan.net`, 其中前两者相同，`.net` 是全年龄健康的壁纸 ♡
-*   网站提供了 Posts 订阅: <https://konachan.com/post/piclens?tags=[tags]>
+-   tags 在 [konachan](https://konachan.com/post) URL 中 `tags=` 后的参数
+-   路由可选 `/konachan` 或 `/konachan.com` 或 `/konachan.net`, 其中前两者相同，`.net` 是全年龄健康的壁纸 ♡
+-   网站提供了 Posts 订阅: <https://konachan.com/post/piclens?tags=[tags]>
 
 :::
 
@@ -100,10 +104,10 @@
 
 举例:
 
-*   过去 24 小时:<https://rsshub.app/konachan/post/popular_recent/1d>
-*   过去一周:<https://rsshub.app/konachan/post/popular_recent/1w>
-*   过去一月:<https://rsshub.app/konachan/post/popular_recent/1m>
-*   过去一年:<https://rsshub.app/konachan/post/popular_recent/1y>
+-   过去 24 小时:<https://rsshub.app/konachan/post/popular_recent/1d>
+-   过去一周:<https://rsshub.app/konachan/post/popular_recent/1w>
+-   过去一月:<https://rsshub.app/konachan/post/popular_recent/1m>
+-   过去一年:<https://rsshub.app/konachan/post/popular_recent/1y>
 
 </Route>
 
@@ -170,10 +174,6 @@
 
 <Route author="MegrezZhu hoilc" example="/nhentai/search/language%3Ajapanese+-scat+-yaoi+-guro+-%22mosaic+censorship%22" path="/nhentai/search/:keyword/:mode?" :paramsDesc="['用于搜索的关键词。可在原网站搜索后复制 q= 后面的内容，也可直接输入。用法详见[官网](https://nhentai.net/info/)', '模式，`simple`为仅封面，`detail`会包括本子每一页，但对服务器负载大，`torrent`会包括磁力链接，需要登录，参见[部分 RSS 模块配置](/install/#bu-fen-rss-mo-kuai-pei-zhi)。默认为`simple`']" anticrawler="1" supportBT="1" />
 
-## pageClass: routes
-
-# 图片
-
 ## Porn Image XXX
 
 ### 最新图片
@@ -203,7 +203,7 @@
 
 ::: tip 提示
 
-*   网站提供了 Posts 订阅: <https://yande.re/post/piclens?tags=[tags]>
+-   网站提供了 Posts 订阅: <https://yande.re/post/piclens?tags=[tags]>
 
 :::
 
@@ -213,10 +213,10 @@
 
 举例:
 
-*   过去 24 小时:<https://rsshub.app/yande.re/post/popular_recent/1d>
-*   过去一周:<https://rsshub.app/yande.re/post/popular_recent/1w>
-*   过去一月:<https://rsshub.app/yande.re/post/popular_recent/1m>
-*   过去一年:<https://rsshub.app/yande.re/post/popular_recent/1y>
+-   过去 24 小时:<https://rsshub.app/yande.re/post/popular_recent/1d>
+-   过去一周:<https://rsshub.app/yande.re/post/popular_recent/1w>
+-   过去一月:<https://rsshub.app/yande.re/post/popular_recent/1m>
+-   过去一年:<https://rsshub.app/yande.re/post/popular_recent/1y>
 
 </Route>
 

@@ -440,6 +440,16 @@ xskb1 对应 <http://www.auto.uestc.edu.cn/index/xskb1.htm>
 
 </Route>
 
+## 福州大学
+
+### 教务处教学通知
+
+<Route author="Lao-Liu233" example="/fzu/jxtz" path="/fzu/jxtz"/>
+
+### 教务处专家讲座
+
+<Route author="Lao-Liu233" example="/fzu/zjjz" path="/fzu/zjjz"/>
+
 ## 广东工业大学
 
 ### 校内新闻网
@@ -1640,6 +1650,20 @@ type 列表：
 ### 研究生院通知公告
 
 <Route author="nczitzk" example="/xjtu/gs/tzgg" path="/xjtu/gs/tzgg" />
+
+## 西北工业大学
+
+### 翱翔门户
+
+<Route author="WhoIsSure" example="/nwpu/10000" path="/nwpu/:column" :paramsDesc="['栏目ID']">
+
+栏目 ID
+
+| 咨询中心 | 通知公告 | 校内新闻 | 校务公开 | 历史文件查询 | 教育教学 | 学术交流 | 学院动态 | 部门动态 |
+| -------- | -------- | -------- | -------- | ------------ | -------- | -------- | -------- | -------- |
+| 10000    | 10001    | 10002    | 10003    | 10004        | 10005    | 10006    | 10007    | 10008    |
+
+</Route>
 
 ## 西南财经大学
 

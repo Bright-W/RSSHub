@@ -46,6 +46,16 @@ pageClass: routes
 
 <Route author="tylinux" example="/chiphell/forum/80" path="/chiphell/forum/:forumId" :paramsDesc="['子版块 id，可在子版块 URL 找到']"/>
 
+## Citavi 中文网站论坛
+
+<Route author="nczitzk" example="/citavi" path="/citavi/:caty" :paramsDesc="['分类名，可在对应分类页 URL 中找到，默认为全部']">
+
+| 全部 | 下载安装   | 许可证  | 入门指南       | 升级更新 | 教程           | 新闻资讯 | 技巧分享 | 账户插件      | 其他   |        |
+| ---- | ---------- | ------- | -------------- | -------- | -------------- | -------- | -------- | ------------- | ------ | ------ |
+|      | Installing | License | GettingStarted | Update   | CitaviinDetail | News     | Share    | CitaviAccount | Addons | Others |
+
+</Route>
+
 ## Dcard
 
 ### 首頁帖子
@@ -428,6 +438,12 @@ pageClass: routes
 ### 楼主动态
 
 <Route author="u3u" example="/tieba/post/lz/5853240586" path="/tieba/post/lz/:id" :paramsDesc="['帖子 ID']"/>
+
+### 用户帖子
+
+<Route author="humpylin" example="/tieba/user/斗鱼游戏君" path="/tieba/user/:uid" :paramsDesc="['用户 ID']" />
+
+用户 ID 可以通过打开用户的主页后查看地址栏的 `un` 字段来获取。
 
 ## 万维读者
 

@@ -156,6 +156,10 @@ pageClass: routes
 
 <Route author="Jeason0228" example="/ipsw/index/ipsws/iPhone11,8" path="/ipsw/index/:ptype/:pname/" :paramsDesc="['填写ipsws或otas,得到不同版本的固件','产品名, `http://rsshub.app/ipsw/index/ipsws/iPod`如填写iPad则关注iPad整个系列(ptype选填为ipsws).`http://rsshub.app/ipsw/index/ipsws/iPhone11,8`如果填写具体的iPhone11,8则关注这个机型的ipsws固件信息']"/>
 
+## ManicTime
+
+<Route author="nczitzk" example="/manictime/releases" path="/manictime/releases"/>
+
 ## Microsoft Edge
 
 ### 外接程序更新
@@ -229,6 +233,12 @@ pageClass: routes
 ### 有新赞助商啦
 
 <Route author="DIYgod" example="/rsshub/sponsors" path="/rsshub/sponsors" radar="1" rssbud="1"/>
+
+## Sesame
+
+### Release Notes
+
+<Route author="nczitzk" example="/sesame/release_notes" path="/sesame/release_notes"/>
 
 ## sketch.com
 

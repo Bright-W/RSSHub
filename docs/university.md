@@ -28,6 +28,12 @@ pageClass: routes
 
 <Route author="exuanbo" example="/polimi/news" path="/polimi/news/:language?" :paramsDesc="['English language code en']" />
 
+## UTDallas
+
+### International Student Services
+
+<Route author="Chang4Tech" example="/utdallas/isso" path="/utdallas/isso" />
+
 ## 安徽工业大学
 
 ### 教务处
@@ -386,6 +392,10 @@ xskb1 对应 <http://www.auto.uestc.edu.cn/index/xskb1.htm>
 
 </Route>
 
+### 研究生院
+
+<Route author="huyyi" example="/uestc/gr" path="/uestc/gr" />
+
 ## 东北大学
 
 ### 东北大学新闻网
@@ -439,6 +449,12 @@ xskb1 对应 <http://www.auto.uestc.edu.cn/index/xskb1.htm>
 | xyxw     | tzgg     | jwxx     | jyxx     | xgsw     |
 
 </Route>
+
+## 复旦大学继续教育学院
+
+### 成人夜大通知公告
+
+<Route author="mrbruce516" example="/fudan/cce" path="/fudan/cce" />
 
 ## 福州大学
 
@@ -843,6 +859,8 @@ jsjxy.hbut.edu.cn 证书链不全，自建 RSSHub 可设置环境变量 NODE_TLS
 | -------- | -------- |
 | tt       | yw       |
 
+</Route>
+
 ### 暨南大学校园时讯
 
 <Route author="hang333" example="/jnu/xysx/yxsd" path="/jnu/xysx/:type" :paramDesc="['校园时讯类型']">
@@ -850,6 +868,8 @@ jsjxy.hbut.edu.cn 证书链不全，自建 RSSHub 可设置环境变量 NODE_TLS
 | 院系速递 | 部门快讯 |
 | -------- | -------- |
 | yxsd     | bmkx     |
+
+</Route>
 
 ## 江南大学
 
@@ -1709,6 +1729,20 @@ type 列表：
 
 </Route>
 
+## 信阳师范学院
+
+### 高等教育自学考试办公室
+
+<Route author="VxRain" example="/xynu/zkb/zkzx" path="/xynu/zkb/:category" :paramsDesc="['分类ID']">
+
+分类 ID（如果请求的分类 ID 在不存在下表中，默认请求`zkzx`）
+
+| 主考专业 | 规章制度 | 实践课程 | 毕业论文 | 学士学位 | 自考毕业 | 自考教材 | 自考指南 | 联系我们 | 自考资讯 | 报名指南 | 日程安排 | 新生入门 | 转考免考 | 复习资料 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| zkzy     | gzzd     | sjkc     | bylw     | xsxw     | zkby     | zkjc     | zkzn     | lxwm     | zkzx     | bmzn     | rcap     | xsrm     | zkmk     | fxzl     |
+
+</Route>
+
 ## 扬州大学
 
 ### 官网消息
@@ -1984,6 +2018,8 @@ type 列表：
 | ------ | ------ | ------ | ------ |
 | jx     | ky     | gl     | fw     |
 
+</Route>
+
 ### 教务处通知新闻
 
 <Route author="hang333" example="/ustc/jwc/info" path="/ustc/jwc/:type?" :paramsDesc="['可选，默认显示所有种类']">
@@ -1991,6 +2027,8 @@ type 列表：
 | 信息 | 教学     | 考试 | 交流     |
 | ---- | -------- | ---- | -------- |
 | info | teaching | exam | exchange |
+
+</Route>
 
 ## 中国科学院
 

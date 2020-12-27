@@ -122,11 +122,32 @@ Generates full-text feeds that the official feed doesn't provide.
 
 </RouteEn>
 
+## Financial Times
+
+### myFT personal RSS
+
+<RouteEn author="HenryQW" example="/ft/myft/rss-key" path="/ft/myft/:key" :paramsDesc="['the last part of myFT personal RSS address']">
+
+::: tip tips
+
+-   Visit ft.com -> myFT -> Contact Preferences to enable personal RSS feed, see [help.ft.com](https://help.ft.com/faq/email-alerts-and-contact-preferences/what-is-myft-rss-feed/)
+-   Obtain the key from the personal RSS address, it looks like `12345678-abcd-4036-82db-vdv20db024b8`
+
+:::
+
+</RouteEn>
+
 ## NHK
 
 ### News Web Easy
 
 <RouteEn author="Andiedie" example="/nhk/news_web_easy" path="/nhk/news_web_easy"/>
+
+## Phoronix
+
+### News & Reviews
+
+<RouteEn author="oppliate" example="/phoronix/news_topic/Intel" path="/phoronix/:page/:queryOrItem?" :paramsDesc="['Page name', 'For `category` it corresponds to `item`, for other pages it\'s `q`. You may find available parameters from their navigator links. E.g. to subscribe to the category page `https://www.phoronix.com/scan.php?page=category&item=Computers`, fill in the path `/phoronix/category/Computers`']" />
 
 ## Reuters
 
@@ -227,7 +248,7 @@ Provides a better reading experience (full text articles) over the official one.
 
 ### News
 
-<RouteEn author="oppilate" example="/wsj/en-us/opinion" path="/wsj/:lang/:category" :paramsDesc="['Language, `en-us` only for now', 'Category, see [RSS feeds in WSJ.com](https://www.wsj.com/news/rss-news-and-feeds)']">
+<RouteEn author="oppilate" example="/wsj/en-us/opinion" path="/wsj/:lang/:category?" :paramsDesc="['Language, `en-us`, `zh-cn`, `zh-tw` are supported', 'Category, only supported in `en-us`. Supports `opinion`, `world_news`, `us_bussiness`, `market_news`, `technology`, `lifestyle`.']">
 
 Provide full article RSS for WSJ topics.
 

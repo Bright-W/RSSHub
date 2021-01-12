@@ -464,10 +464,40 @@
         _name: '掘金',
         '.': [
             {
+                title: '标签',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-biao-qian',
+                source: '/tag/:tag',
+                target: '/juejin/tag/:tag',
+            },
+            {
+                title: '小册',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-xiao-ce',
+                source: '/books',
+                target: '/juejin/books',
+            },
+            {
+                title: '沸点',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-fei-dian',
+                source: ['/pins/:type', '/pins/topic/:type'],
+                target: (params) => (params.type !== 'recommended' ? '/juejin/pins/:type' : '/juejin/pins'),
+            },
+            {
                 title: '专栏',
-                docs: 'https://docs.rsshub.app/programming.html#jue-jin',
-                source: '/user/:id/posts',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-zhuan-lan',
+                source: ['/user/:id', '/user/:id/posts'],
                 target: '/juejin/posts/:id',
+            },
+            {
+                title: '收藏集',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-shou-cang-ji',
+                source: ['/user/:id', '/user/:id/collections'],
+                target: '/juejin/collections/:id',
+            },
+            {
+                title: '单个收藏夹',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-dan-ge-shou-cang-jia',
+                source: '/collection/:collectionId',
+                target: '/juejin/collection/:collectionId',
             },
         ],
     },
@@ -2005,6 +2035,82 @@
             },
         ],
     },
+    '141jav.com': {
+        _name: '141JAV BT',
+        '.': [
+            {
+                title: '今日种子',
+                docs: 'https://docs.rsshub.app/multimedia.html#141jav',
+                source: '/',
+                target: (params, url, document) => {
+                    const today = document.querySelector('div.card.mb-1.card-overview').getAttribute('data-date').replace(/-/g, '');
+                    return `/141jav/day/${today}`;
+                },
+            },
+            {
+                title: '今日演员',
+                docs: 'https://docs.rsshub.app/multimedia.html#141jav',
+                source: '/',
+                target: (params, url, document) => {
+                    const star = document.querySelector('div.card-content > div > a').getAttribute('href');
+                    return `/141jav${star}`;
+                },
+            },
+            {
+                title: '页面种子',
+                docs: 'https://docs.rsshub.app/multimedia.html#141jav',
+                source: ['/:type', '/:type/:key', '/:type/:key/:morekey'],
+                target: (params, url, document) => {
+                    const itype = params.morekey === undefined ? `${params.type}` : params.type === 'tag' ? 'tag' : 'day';
+                    let ikey = `${itype === 'day' ? params.type : ''}${params.key || ''}${itype === 'tag' && params.morekey !== undefined ? '%2F' : ''}${params.morekey || ''}`;
+                    if (ikey === '' && itype === 'tag') {
+                        ikey = document.querySelector('div.thumbnail.is-inline > a').getAttribute('href').replace('/tag/', '').replace('/', '%2F');
+                    } else if (ikey === '' && itype === 'actress') {
+                        ikey = document.querySelector('div.card > a').getAttribute('href').replace('/actress/', '');
+                    }
+                    return `/141jav/${itype}/${ikey}`;
+                },
+            },
+        ],
+    },
+    '141ppv.com': {
+        _name: '141ppv BT',
+        '.': [
+            {
+                title: '今日种子',
+                docs: 'https://docs.rsshub.app/multimedia.html#141pvp',
+                source: '/',
+                target: (params, url, document) => {
+                    const today = document.querySelector('div.card.mb-1.card-overview').getAttribute('data-date').replace(/-/g, '');
+                    return `/141ppv/day/${today}`;
+                },
+            },
+            {
+                title: '今日演员',
+                docs: 'https://docs.rsshub.app/multimedia.html#141ppv',
+                source: '/',
+                target: (params, url, document) => {
+                    const star = document.querySelector('div.card-content > div > a').getAttribute('href');
+                    return `/141ppv${star}`;
+                },
+            },
+            {
+                title: '页面种子',
+                docs: 'https://docs.rsshub.app/multimedia.html#141ppv',
+                source: ['/:type', '/:type/:key', '/:type/:key/:morekey'],
+                target: (params, url, document) => {
+                    const itype = params.morekey === undefined ? `${params.type}` : params.type === 'tag' ? 'tag' : 'day';
+                    let ikey = `${itype === 'day' ? params.type : ''}${params.key || ''}${itype === 'tag' && params.morekey !== undefined ? '%2F' : ''}${params.morekey || ''}`;
+                    if (ikey === '' && itype === 'tag') {
+                        ikey = document.querySelector('div.thumbnail.is-inline > a').getAttribute('href').replace('/tag/', '').replace('/', '%2F');
+                    } else if (ikey === '' && itype === 'actress') {
+                        ikey = document.querySelector('div.card > a').getAttribute('href').replace('/actress/', '');
+                    }
+                    return `/141ppv/${itype}/${ikey}`;
+                },
+            },
+        ],
+    },
     'sexinsex.net': {
         _name: 'sexinsex',
         '.': [
@@ -2466,6 +2572,20 @@
                 target: (params) => {
                     const id = params.id.includes('thread') ? params.id.split('-')[1] : '';
                     return id ? `/saraba1st/thread/${id}` : '';
+                },
+            },
+        ],
+    },
+    'scboy.com': {
+        _name: 'scboy 论坛',
+        www: [
+            {
+                title: '帖子',
+                docs: 'https://docs.rsshub.app/bbs.html#scboy',
+                source: '',
+                target: (params, url) => {
+                    const id = url.includes('thread') ? url.split('-')[1].split('.')[0] : '';
+                    return id ? `/scboy/thread/${id}` : '';
                 },
             },
         ],

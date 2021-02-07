@@ -391,7 +391,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 福利资源 - met.red
 
-<Route author="junfengP" example="/metred/fuli" path="/metred/fuli" />
+<Route author="junfengP queensferryme" example="/metred/fuli" path="/metred/fuli" />
 
 ## 古诗文网
 
@@ -753,6 +753,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 新闻动态
 
 <Route author="kt286" example="/tprtc/news" path="/tprtc/news"/>
+
+## 天眼查
+
+### 热门搜索
+
+<Route author="nczitzk" example="/tianyancha/hot" path="/tianyancha/hot" anticrawler="1"/>
 
 ## 无讼案例
 

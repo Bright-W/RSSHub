@@ -56,7 +56,7 @@ If you don't want to setup credentials, use Picuki.
 
 ### User Profile
 
-<RouteEn author="oppilate DIYgod" example="/instagram/user/stefaniejoosten" path="/instagram/:category/:key" :paramsDesc="['Feed category. Only user category is supported for now.','Key for such category. E.g. username/ID for user feed']" radar="1"/>
+<RouteEn author="oppilate DIYgod" example="/instagram/user/stefaniejoosten" path="/instagram/:category/:key" :paramsDesc="['Feed category. Only user category is supported for now.','Key for such category. E.g. username/ID for user feed']" radar="1" anticrawler="1"/>
 
 ## Lofter
 
@@ -263,6 +263,12 @@ Tiny Tiny RSS will add `sandbox="allow-scripts"` to all iframe elements, as a re
 <RouteEn path="/youtube/user/:username/:embed?" example="/youtube/user/JFlaMusic" :paramsDesc="['YouTuber id', 'Default to embed the video, set to any value to disable embedding']" radar="1" rssbud="1"/>
 
 ### Channel
+
+::: tip
+
+YouTube provides official RSS feeds for channels, for instance <https://www.youtube.com/feeds/videos.xml?channel_id=UCDwDMPOZfxVV0x_dz0eQ8KQ>.
+
+:::
 
 <RouteEn path="/youtube/channel/:id/:embed?" example="/youtube/channel/UCDwDMPOZfxVV0x_dz0eQ8KQ" :paramsDesc="['YouTube channel id', 'Default to embed the video, set to any value to disable embedding']" radar="1" rssbud="1"/>
 
